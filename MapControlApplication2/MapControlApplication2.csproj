@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A5DAD74-FB7D-49EC-993F-5C1C6EACE212}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapControlApplication2</RootNamespace>
+    <AssemblyName>MapControlApplication2</AssemblyName>
+    <ApplicationIcon>Earth.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPoint.Designer.cs">
+      <DependentUpon>AddPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeForm.Designer.cs">
+      <DependentUpon>AttributeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blur query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blur query.Designer.cs">
+      <DependentUpon>Blur query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewDocument.cs" />
+    <Compile Include="DataOperator.cs" />
+    <Compile Include="FormAttributeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttributeTable.Designer.cs">
+      <DependentUpon>FormAttributeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBufferAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBufferAnalysis.Designer.cs">
+      <DependentUpon>FormBufferAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLineSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLineSymbol.Designer.cs">
+      <DependentUpon>FormLineSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPointSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPointSymbol.Designer.cs">
+      <DependentUpon>FormPointSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPolygonSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPolygonSymbol.Designer.cs">
+      <DependentUpon>FormPolygonSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectByAttr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectByAttr.Designer.cs">
+      <DependentUpon>FormSelectByAttr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTitle.Designer.cs">
+      <DependentUpon>InsertTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapAnalysis.cs" />
+    <Compile Include="MapComposer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPoint.resx">
+      <DependentUpon>AddPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttributeForm.resx">
+      <DependentUpon>AttributeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blur query.resx">
+      <DependentUpon>Blur query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAttributeTable.resx">
+      <DependentUpon>FormAttributeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBufferAnalysis.resx">
+      <DependentUpon>FormBufferAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLineSymbol.resx">
+      <DependentUpon>FormLineSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPointSymbol.resx">
+      <DependentUpon>FormPointSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPolygonSymbol.resx">
+      <DependentUpon>FormPolygonSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectByAttr.resx">
+      <DependentUpon>FormSelectByAttr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTitle.resx">
+      <DependentUpon>InsertTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Earth.ico" />
+    <None Include="Resources\zoom-out.png" />
+    <None Include="Resources\ZoomOut.png" />
+    <None Include="Resources\zoom-in.png" />
+    <None Include="Resources\ZoomIn.png" />
+    <None Include="Resources\zoom-full-extent_HOVER.gif" />
+    <None Include="Resources\ZoomEntire.png" />
+    <None Include="Resources\zoom.png" />
+    <None Include="Resources\uniquerender.png" />
+    <None Include="Resources\uninon.png" />
+    <None Include="Resources\tool_FixedZoomOutD.jpg" />
+    <None Include="Resources\tool_FixedZoomInD.jpg" />
+    <None Include="Resources\TocZoom.png" />
+    <None Include="Resources\textSymbol.png" />
+    <None Include="Resources\text.png" />
+    <None Include="Resources\SymmetricDifference.png" />
+    <None Include="Resources\symbol.png" />
+    <None Include="Resources\stackchartrender.png" />
+    <None Include="Resources\snap.png" />
+    <None Include="Resources\simplerender.png" />
+    <None Include="Resources\simpleFill.png" />
+    <None Include="Resources\select-rectangle.gif" />
+    <None Include="Resources\select-polygon.gif" />
+    <None Include="Resources\select-point.gif" />
+    <None Include="Resources\select-line.gif" />
+    <None Include="Resources\select-circle.gif" />
+    <None Include="Resources\SelByRec.png" />
+    <None Include="Resources\SelByPolyline.png" />
+    <None Include="Resources\SelByPolygon.png" />
+    <None Include="Resources\SelByPoint.png" />
+    <None Include="Resources\SelByName.png" />
+    <None Include="Resources\SelByCircle.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\SaveAs.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\ruler.png" />
+    <None Include="Resources\RefreshMap.png" />
+    <None Include="Resources\RedLine.bmp" />
+    <None Include="Resources\rectangel.png" />
+    <None Include="Resources\QueryByAttr.png" />
+    <None Include="Resources\QueryAttribute.png" />
+    <None Include="Resources\propostionRender.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\polygon.png" />
+    <None Include="Resources\piechartrender.png" />
+    <None Include="Resources\pictureLine.png" />
+    <None Include="Resources\pictureFill.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\pan2.png" />
+    <None Include="Resources\Pan.png" />
+    <None Include="Resources\openSpecific.png" />
+    <None Include="Resources\north.png" />
+    <None Include="Resources\multiLine.png" />
+    <None Include="Resources\multilayer.png" />
+    <None Include="Resources\multiFill.png" />
+    <None Include="Resources\minScale.bmp" />
+    <None Include="Resources\menuSave.png" />
+    <None Include="Resources\menuPrintMap.png" />
+    <None Include="Resources\menuOpenMap.png" />
+    <None Include="Resources\menuExitBtn.png" />
+    <None Include="Resources\menuCloseMap.png" />
+    <None Include="Resources\maxScale.bmp" />
+    <None Include="Resources\markerLine.png" />
+    <None Include="Resources\markerFill.png" />
+    <None Include="Resources\MapPreView.png" />
+    <None Include="Resources\MapNextView.png" />
+    <None Include="Resources\linefill.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\legend.png" />
+    <None Include="Resources\layer.png" />
+    <None Include="Resources\Intersect.png" />
+    <None Include="Resources\insert2.png" />
+    <None Include="Resources\insert.png" />
+    <None Include="Resources\indicator.gif" />
+    <None Include="Resources\hashLine.png" />
+    <None Include="Resources\grid.png" />
+    <None Include="Resources\gradiantFill.png" />
+    <None Include="Resources\GoToPoint.bmp" />
+    <None Include="Resources\geometryPolyline.png" />
+    <None Include="Resources\geometryPolygon.png" />
+    <None Include="Resources\geometryPoint.png" />
+    <None Include="Resources\geometry.png" />
+    <None Include="Resources\forward.png" />
+    <None Include="Resources\folder_with_data_closed_1.bmp" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\FixedZoomOut.bmp" />
+    <None Include="Resources\FixedZoomIn.bmp" />
+    <None Include="Resources\feature_selection.png" />
+    <None Include="Resources\ExportImg.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\EARTH.png" />
+    <None Include="Resources\dotdensityrender.png" />
+    <None Include="Resources\dot.png" />
+    <None Include="Resources\DistanceMeasure.png" />
+    <None Include="Resources\Difference.png" />
+    <None Include="Resources\database_connection_with_layer.bmp" />
+    <None Include="Resources\cycle.png" />
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\ConvexHull.png" />
+    <None Include="Resources\ConstructUion.png" />
+    <None Include="Resources\connection_x.bmp" />
+    <None Include="Resources\connection.bmp" />
+    <None Include="Resources\collection.png" />
+    <None Include="Resources\Clip.png" />
+    <None Include="Resources\ClearSels.bmp" />
+    <None Include="Resources\clear-selections.gif" />
+    <None Include="Resources\clearSel.png" />
+    <None Include="Resources\clear_selection.png" />
+    <None Include="Resources\classbreak.png" />
+    <None Include="Resources\character.png" />
+    <None Include="Resources\center.png" />
+    <None Include="Resources\cartoLine.png" />
+    <None Include="Resources\buffer.png" />
+    <None Include="Resources\boundary.png" />
+    <None Include="Resources\barchartrender.png" />
+    <None Include="Resources\backward.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\AreaMeasure.png" />
+    <None Include="Resources\annotation.png" />
+    <None Include="Resources\addShape.png" />
+    <None Include="Resources\AddSegments.png" />
+    <None Include="Resources\addPolygon.png" />
+    <None Include="Resources\AddData.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
